@@ -25,10 +25,5 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 db.user = require("../models/user.model.js")(sequelize, Sequelize)
-db.reservation = require("../models/reservation.model.js")(sequelize, Sequelize)
-db.billet = require("../models/billet.model.js")(sequelize, Sequelize)
-
-db.reservation.belongsTo(db.user)
-db.user.hasMany(db.reservation)
 
 module.exports = db;
